@@ -3,7 +3,7 @@ resource "aws_glue_crawler" "patents_uspto" {
   name          = "patents_uspto"
   role          = local.arn
   description   = "AWS Glue Crawler for crawling over the patents data"
-  table_prefix  = "bronze_"
+  table_prefix  = "bronze_granted_"
 
   configuration = jsonencode(
     {

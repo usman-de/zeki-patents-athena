@@ -6,6 +6,12 @@ Welcome to the Zeki patents Repository! To get started, follow the instructions 
 
 To work with this repository, you must download the Docker image from AWS ECR. Follow the instructions [here](https://thezeki.atlassian.net/wiki/spaces/E/pages/144605185/Running+DBT+in+Docker+A+Step-by-Step+Guide+for+AWS+ECR).
 
+## File Format Conversion
+Convert the CSV/TSV format files to PQ format for easy read for Athena.
+
+## Load to Athena
+Load the raw data to Athena using AWS GLUE Crawler. 
+
 ## Handling File Permission Issues
 
 If you encounter file permission errors within the Docker container, follow these steps:
