@@ -9,7 +9,7 @@ resource "aws_glue_crawler" "patents_uspto" {
     {
       Grouping = {
         TableGroupingPolicy = "CombineCompatibleSchemas"
-        TableLevelConfiguration = 4
+        TableLevelConfiguration = 5
       }
       CrawlerOutput = {
         Tables = { TableThreshold = 3 }
@@ -19,7 +19,7 @@ resource "aws_glue_crawler" "patents_uspto" {
   )
 
   s3_target {
-    path = "s3://${local.s3_bucket_name}/loading/granted/"
+    path = "s3://${local.s3_bucket_name}/loading/granted/parquet/"
   }
 
   schema_change_policy {
