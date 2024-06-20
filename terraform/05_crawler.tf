@@ -1,5 +1,5 @@
 resource "aws_glue_crawler" "patents_uspto" {
-  database_name = aws_glue_catalog_database.zeki_coresignal.name
+  database_name = aws_glue_catalog_database.zeki_patents.name
   name          = "patents_uspto"
   role          = local.arn
   description   = "AWS Glue Crawler for crawling over the patents data"
